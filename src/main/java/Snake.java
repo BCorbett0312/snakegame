@@ -4,17 +4,18 @@ import java.util.List;
 public class Snake {
 
     private Integer length;
-    private List<Integer> snakeXLength;
-    private List<Integer> snakeYLength;
+    private int[] snakeXLength;
+    private int[] snakeYLength;
     private Direction direction;
+
+    private Integer score;
 
     public Snake() {
         length = 0;
-        snakeXLength = new ArrayList<Integer>();
-        snakeXLength.add(50);
-        snakeYLength = new ArrayList<Integer>();
-        snakeYLength.add(100);
+        snakeXLength = new int[750];
+        snakeYLength = new int[750];
         direction = Direction.RIGHT;
+        score = 0;
     }
 
     public Integer getLength() {
@@ -25,12 +26,12 @@ public class Snake {
         this.length = length;
     }
 
-    public List<Integer> getSnakeXLength() {
+    public int[] getSnakeXLength() {
         return snakeXLength;
     }
 
 
-    public List<Integer> getSnakeYLength() {
+    public int[] getSnakeYLength() {
         return snakeYLength;
     }
 
@@ -41,5 +42,13 @@ public class Snake {
 
     public void setDirection(Direction direction) {
         this.direction = direction;
+    }
+
+    public void setScore(Integer score){
+        this.score = score;
+    }
+
+    public Integer getScore(){
+        return this.score;
     }
 }

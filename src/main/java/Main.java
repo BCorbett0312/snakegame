@@ -10,10 +10,7 @@ public class Main {
         jFrame.setResizable(false);
         jFrame.setVisible(true);
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-
         Gameplay gameplay = new Gameplay();
-
         jFrame.add(gameplay);
 
     }
