@@ -22,11 +22,6 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
     private Apple apple;
 
 
-
-    private Random random = new Random();
-
-
-
     public Gameplay(){
         addKeyListener(this);
         setFocusable(true);

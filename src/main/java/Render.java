@@ -108,7 +108,7 @@ public class Render extends Component {
     private void drawGameOver(Graphics g){
         g.setColor(Color.WHITE);
         g.setFont(new Font("arial", Font.BOLD, 50));
-        g.drawString("Game Over", 300, 300);
+        g.drawString("Game Over", 325, 300);
     }
 
     private void drawRestart(Graphics g){
