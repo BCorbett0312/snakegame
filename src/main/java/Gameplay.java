@@ -4,7 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.util.Random;
 
 public class Gameplay extends JPanel implements KeyListener, ActionListener {
 
@@ -13,20 +12,19 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener {
     private Integer moves = 0;
 
     private Boolean toPlay;
-    private Render render;
+    private final Render render;
 
-    private Timer timer;
-    private Integer delay = 100;
+    private final Timer timer;
 
-    private Snake snake;
-    private Apple apple;
+    private final Snake snake;
+    private final Apple apple;
 
 
     public Gameplay(){
         addKeyListener(this);
         setFocusable(true);
         setFocusTraversalKeysEnabled(false);
-        timer = new Timer(delay, this);
+        timer = new Timer(100, this);
         timer.start();
         render = new Render();
         this.apple = new Apple();
